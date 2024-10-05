@@ -1,4 +1,6 @@
 import React from 'react'
+
+import DataTable from 'react-data-table-component';
 import bid_1 from '../../images/bid/bid_1.jpg'
 import bid_2 from '../../images/bid/bid_2.jpg'
 import bid_3 from '../../images/bid/bid_3.jpg'
@@ -6,8 +8,10 @@ import { Footer } from '../footer/footer';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo/favicon.png'
 
+ 
 
 function Dashboard() {
+  
   const filters_data = [
     {
   img:bid_1,
@@ -90,6 +94,103 @@ function Dashboard() {
                                          time:"13 Hours"
                                         },
  
+  ]
+  const columns = [
+    {
+      name: 'Review Id',
+      selector: row => row.title,
+    },
+    {
+      name: 'Date',
+      selector: row => row.date,
+    },
+    {
+      name: 'Price',
+      selector: row => row.price,
+    },
+    {
+      name: 'Withdroal Date',
+      selector: row => row.recive_date,
+    },
+    {
+      name: 'Status',
+      selector: row => row.status,
+    },
+    
+  ];
+  
+  const data = [
+      {
+      id: 1,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+    },
+    {
+      id: 2,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 3,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 4,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 5,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 6,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 7,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
+    {
+      id: 8,
+      title: 'Shree Shyam Cafe',
+      recive_date: '25-02-2024',
+      price: '20 INR',
+      date: '16-02-2024',
+      status: 'Pending',
+
+    },
   ]
   return (
     <>
@@ -206,16 +307,63 @@ function Dashboard() {
 
                   <div className="profile_box">
                          <div className="row">
-                             <div className="col-xl-4">
+                          <div className="col-xl-12">
+                            <div className="whitdrawl_detail">
+                              <div className="form_box mb-3">
+                                <label htmlFor="">UPI ID</label>
+                              <input type="text" name="" id="" /> 
+                              </div>
+                              <div className="form_box mb-3">
+                                <label htmlFor="">Amount</label>
+                              <input type="text" name="" id="" /> 
+                              </div>
+                            
+                              <div className="form_box mb-3">
+                                <button>Withdrwal</button>                                
+                              </div>
+                            </div>
+                          </div>
+                             <div className="col-xl-4 mb-xl-0 mb-3">
                               <div className="wallet_box">
                                 <div className="content">
                                 <h3>500 INR</h3>
+                                <p>Total Ammount</p>
+                                </div>
+                                  
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                              </div>
+                
+                             </div>
+                             <div className="col-xl-4 mb-xl-0 mb-3">
+                              <div className="wallet_box">
+                                <div className="content">
+                                <h3>50 INR</h3>
                                 <p>Pending Ammount</p>
                                 </div>
                                   
                                     <i class="fa-solid fa-money-bill-wave"></i>
                               </div>
                 
+                             </div>
+                             <div className="col-xl-4 mb-xl-0 mb-3">
+                              <div className="wallet_box">
+                                <div className="content">
+                                <h3>300 INR</h3>
+                                <p>Tranfer Ammount</p>
+                                </div>
+                                  
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                              </div>
+                
+                             </div>
+
+                             <div className="col-xl-12">
+                              <div className="das_table">
+                              <DataTable
+			columns={columns}
+			data={data}
+		/>
+                              </div>
                              </div>
                              </div>
                              </div>
