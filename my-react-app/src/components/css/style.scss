@@ -24,24 +24,7 @@ body {
     font-family: $Rubik !important;
 
 }
-
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-}
-
-body::-webkit-scrollbar {
-    width: 10px;
-    background-color: #F5F5F5;
-}
-
-body::-webkit-scrollbar-thumb {
-    border-radius: 9px;
-    -webkit-box-shadow: inset 0 0 6px #d6292960;
-    background-color: #CA77E7;
-}
-
+ 
 
 .sidebar::-webkit-scrollbar-track {
     -webkit-box-shadow: none;
@@ -223,7 +206,7 @@ nav {
     z-index: 33;
 
     .nav-item {
-        padding-left: 34px;
+     
         padding-right: 15px !important;
 
         .nav-link {
@@ -239,7 +222,7 @@ nav {
         }
 
         .login-btn {
-            background-color: $pink-color ;
+            background-color: #22be0d;
             border-radius: 48px;
             color: $white-color;
             padding: 16px 45px !important;
@@ -247,6 +230,7 @@ nav {
             position: relative;
             display: flex;
             align-items: center;
+            color: white !important;
             justify-content: center;
             transition: all ease 0.5s;
 
@@ -268,7 +252,7 @@ nav {
             }
 
             &:hover {
-                box-shadow: 0 0 12px 1px rgba(202, 119, 231, 1);
+                box-shadow: 0 0 12px 1px rgba(16, 255, 4, 0.304);
                 color: #fff !important;
             }
         }
@@ -695,13 +679,13 @@ nav {
 .slider_box_inner {
     display: block;
     padding: 23px 20px;
-    background-color: $white-color;
-    border: 1px solid #D1D3D7 !important;
+    background-color:transparent;
+    border: 1px solid #d1d3d700 !important;
     border-radius: 20px;
     text-align: center;
     transition: all ease 0.5s;
     cursor: pointer;
-    width: 190px;
+    width: 100%;
 
     span {
         width: 100%;
@@ -715,7 +699,7 @@ nav {
     }
 
     &:hover {
-        background-color: $pink-color;
+        background-color: transparent;
     }
 }
 
@@ -731,10 +715,11 @@ nav {
 .swiper-button-next {
     bottom: 0 !important;
     top: auto;
-    background-color: $pink-color;
+    background-color:#22be0d  ;
     padding: 12px !important;
     border-radius: 5px;
     height: 32px;
+    color: white !important;
     width: 40px;
 }
 
@@ -757,6 +742,8 @@ nav {
     line-height: 1;
     text-rendering: auto;
     font-size: 19px;
+    color: white !important;
+    
 }
 
 .swiper-button-prev:after {
@@ -771,6 +758,8 @@ nav {
     line-height: 1;
     text-rendering: auto;
     font-size: 19px;
+    color: white !important;
+
 }
 
 .swiper-button-prev {
@@ -1466,8 +1455,8 @@ nav {
 footer {
     width: 100%;
     background-color: #FFEEFF;
-    border-top: 2px dotted rgba(201, 119, 231, 0.7803921569);
-    padding: 50px 0px;
+    // border-top: 2px dotted rgba(201, 119, 231, 0.7803921569);
+    // padding: 50px 0px;
 
     .footer_inner_2 {
         h5 {
@@ -2499,10 +2488,10 @@ footer {
     padding-left: 5px;
 }
 .navbar-toggler{
-    background-color: #a020f0 !important;
+    background-color: #22be0d !important;
     padding: 5px !important;
    
-    border: 1px solid #a020f0;
+    border: 1px solid #22be0d;
    
     
 }
@@ -3587,10 +3576,10 @@ footer {
             .navbar-collapse {
                 position: absolute;
                 left: 0;
-                top: 115px;
+                top: 80px;
                 width: 100%;
                 z-index: 222;
-                background: #CA77E7;
+                background: #22be0d;
                 overflow: scroll;
                 height: 100vh;
 
@@ -3677,7 +3666,9 @@ footer {
     .swiper-button-next {
         right: 38%;
     }
-
+    .navbar{
+        padding: 20px 0 !important; 
+    }
     .swiper-button-prev {
         left: 38%;
     }
@@ -3799,7 +3790,7 @@ footer {
     }
 
     .navbar .container .navbar-collapse {
-        top: 100px;
+        top: 88px;
     }
 
     .position_area .position_area_inner {
